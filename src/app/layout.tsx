@@ -15,8 +15,8 @@ export default function RootLayout({
   return (
     <html lang="zh-CN">
       <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap"
+       <link
+          href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css"
           rel="stylesheet"
         />
       </head>
