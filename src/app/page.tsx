@@ -7,7 +7,7 @@ import Fireflies from "@/components/Fireflies";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#1a1a2e] text-white">
+    <div className="min-h-screen bg-[#1a1a2e] text-white relative">
       <WelcomeAnimation />
       <Fireflies />
 
