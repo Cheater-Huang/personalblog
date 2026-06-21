@@ -32,19 +32,23 @@ function getAllMdxFiles(dir: string, baseDir: string): string[][] {
 
 // 获取所有文章元信息
 export function getAllPosts(): PostMeta[] {
-  const slugs = getAllMdxFiles(postsDir, postsDir);
-  return slugs.map((slug) => {
-    const filePath = path.join(postsDir, ...slug) + ".mdx";
-    const raw = fs.readFileSync(filePath, "utf-8");
-    const { data } = matter(raw);
-    return {
-      slug,
-      title: data.title ?? "无题",
-      date: data.date ? new Date(data.date).toISOString().slice(0, 10) : "",
-      category: data.category ?? "未分类",
-      description: data.description ?? "",
-    };
-  }).sort((a, b) => (a.date > b.date ? -1 : 1));
+  try {
+    const slugs = getAllMdxFiles(postsDir, postsDir);
+    return slugs.map((slug) => {
+      const filePath = path.join(postsDir, ...slug) + ".mdx";
+      const raw = fs.readFileSync(filePath, "utf-8");
+      const { data } = matter(raw);
+      return {
+        slug,
+        title: data.title ?? "无题",
+        date: data.date ? new Date(data.date).toISOString().slice(0, 10) : "",
+        category: data.category ?? "未分类",
+        description: data.description ?? "",
+      };
+    }).sort((a, b) => (a.date > b.date ? -1 : 1));
+  } catch {
+    return [];
+  }
 }
 
 // 获取所有分类
