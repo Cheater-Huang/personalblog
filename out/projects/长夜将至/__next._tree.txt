@@ -1,2 +1,2 @@
-:HL["/_next/static/chunks/2m_z3te21bn_j.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"projects","param":null,"prefetchHints":0,"slots":{"children":{"name":"novel","param":{"type":"d","key":"%E9%95%BF%E5%A4%9C%E5%B0%86%E8%87%B3","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"559W4bt4-rRG3R5rVMMS4"}
+:HL["/_next/static/chunks/0682wa-dp76d_.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"projects","param":null,"prefetchHints":0,"slots":{"children":{"name":"novel","param":{"type":"d","key":"%E9%95%BF%E5%A4%9C%E5%B0%86%E8%87%B3","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"Mjx051gHP7pdt9Gg7rj7k"}

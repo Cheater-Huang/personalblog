@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getChapter, getChaptersByNovel, getAllNovels } from "@/lib/novels";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import BackButton from "@/components/BackButton";
+import Comments from "@/components/Comments";
 
 export async function generateStaticParams() {
   try {
@@ -93,6 +94,7 @@ export default async function ChapterPage({
               </Link>
             ) : <div />}
           </div>
+          <Comments page={`${novel}/${chapter}`} />
         </div>
 
       </div>

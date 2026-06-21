@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getPostBySlug, getAllPosts } from "@/lib/posts";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import BackButton from "@/components/BackButton";
+import Comments from "@/components/Comments";
 
 export async function generateStaticParams() {
   const posts = getAllPosts();
@@ -66,7 +67,7 @@ export default async function PostPage({
             </article>
           </div>
 
-          
+          <Comments page={meta.slug.join("/")} />
         </div>
 
       </div>
