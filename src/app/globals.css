@@ -3,24 +3,58 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --accent: #6366f1;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #0f0f0f;
     --foreground: #ededed;
+    --accent: #818cf8;
   }
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Times New Roman", "SimSun", "宋体", serif;
+  antialiased: true;
+}
+/* 行楷：用于昵称和个性签名 */
+.font-xingkai {
+  font-family: "STXingkai", "华文行楷", "KaiTi", "楷体", cursive;
+}
+
+/* 新罗马：用于英文 */
+.font-roman {
+  font-family: "Times New Roman", serif;
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+/* 文章正文段落首行缩进 */
+.prose p {
+  text-indent: 2em;
 }
