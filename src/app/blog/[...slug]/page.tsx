@@ -23,7 +23,17 @@ export default async function PostPage({
       <div className="w-full max-w-2xl px-6" style={{ marginTop: "50px" }}>
 
         {/* 返回键 */}
-       <BackButton label="← 返回随笔" />
+       <Link
+          href="/blog"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm transition-all duration-300 mb-10"
+          style={{
+            background: "rgba(255,255,255,0.1)",
+            border: "1px solid rgba(255,255,255,0.2)",
+            color: "rgba(255,255,255,0.8)",
+          }}
+        >
+          ← 返回随笔
+        </Link>
 
         {/* 文章头部 */}
        {/* 文章头部 */}

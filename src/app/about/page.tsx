@@ -7,7 +7,17 @@ export default function AboutPage() {
       <div className="w-full max-w-2xl px-6" style={{ marginTop: "120px" }}>
 
         {/* 返回键 */}
-        <BackButton label="← 返回首页" />
+       <Link
+          href="/"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm transition-all duration-300 mb-10"
+          style={{
+            background: "rgba(255,255,255,0.1)",
+            border: "1px solid rgba(255,255,255,0.2)",
+            color: "rgba(255,255,255,0.8)",
+          }}
+        >
+          ← 返回首页
+        </Link>
 
         {/* 信件卡片 */}
         <div className="w-full px-10 py-12 mb-16" style={{ background: "#f5f0e8", color: "#111111" }}>
