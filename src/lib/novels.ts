@@ -22,29 +22,34 @@ export type ChapterMeta = {
   date: string;
 };
 
-// 获取所有小说
 export function getAllNovels(): NovelMeta[] {
-  const dirs = fs.readdirSync(novelsDir, { withFileTypes: true })
-    .filter((d) => d.isDirectory())
-    .map((d) => d.name);
+  try {
+    if (!fs.existsSync(novelsDir)) return [];
+    const dirs = fs.readdirSync(novelsDir, { withFileTypes: true })
+      .filter((d) => d.isDirectory())
+      .map((d) => d.name);
 
-  return dirs.map((dir) => {
-    const indexPath = path.join(novelsDir, dir, "index.mdx");
-    const raw = fs.readFileSync(indexPath, "utf-8");
-    const { data } = matter(raw);
-    return {
-      slug: dir,
-      title: data.title ?? dir,
-      description: data.description ?? "",
-      author: data.author ?? "",
-      status: data.status ?? "连载中",
-      updatedAt: data.updatedAt ? new Date(data.updatedAt).toISOString().slice(0, 10) : "",
-      color: data.color ?? "#2d1b4e",
-    };
-  });
+    return dirs.map((dir) => {
+      const indexPath = path.join(novelsDir, dir, "index.mdx");
+      if (!fs.existsSync(indexPath)) return null;
+      const raw = fs.readFileSync(indexPath, "utf-8");
+      const { data } = matter(raw);
+      return {
+        slug: dir,
+        title: data.title ?? dir,
+        description: data.description ?? "",
+        author: data.author ?? "",
+        status: data.status ?? "连载中",
+        updatedAt: data.updatedAt ? new Date(data.updatedAt).toISOString().slice(0, 10) : "",
+        color: data.color ?? "#2d1b4e",
+      };
+    }).filter(Boolean) as NovelMeta[];
+  } catch (e) {
+    console.error("getAllNovels error:", e);
+    return [];
+  }
 }
 
-// 获取某部小说的所有章节
 export function getChaptersByNovel(novelSlug: string): ChapterMeta[] {
   const novelDir = path.join(novelsDir, decodeURIComponent(novelSlug));
   const files = fs.readdirSync(novelDir)
@@ -63,9 +68,12 @@ export function getChaptersByNovel(novelSlug: string): ChapterMeta[] {
   }).sort((a, b) => a.order - b.order);
 }
 
-// 获取单章内容
 export function getChapter(novelSlug: string, chapterSlug: string) {
-  const filePath = path.join(novelsDir, decodeURIComponent(novelSlug), decodeURIComponent(chapterSlug) + ".mdx");
+  const filePath = path.join(
+    novelsDir,
+    decodeURIComponent(novelSlug),
+    decodeURIComponent(chapterSlug) + ".mdx"
+  );
   const raw = fs.readFileSync(filePath, "utf-8");
   const { data, content } = matter(raw);
   return {
@@ -80,9 +88,12 @@ export function getChapter(novelSlug: string, chapterSlug: string) {
   };
 }
 
-// 获取小说简介
 export function getNovelInfo(novelSlug: string) {
-  const indexPath = path.join(novelsDir, decodeURIComponent(novelSlug), "index.mdx");
+  const indexPath = path.join(
+    novelsDir,
+    decodeURIComponent(novelSlug),
+    "index.mdx"
+  );
   const raw = fs.readFileSync(indexPath, "utf-8");
   const { data, content } = matter(raw);
   return {
