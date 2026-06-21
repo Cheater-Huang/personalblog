@@ -5,21 +5,29 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 export default function WelcomeAnimation() {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState<boolean | null>(null);
 
   useEffect(() => {
     const hasPlayed = sessionStorage.getItem("welcomePlayed");
     if (hasPlayed) {
+      setShow(false);
       return;
     }
     setShow(true);
     const timer = setTimeout(() => {
-    
       setShow(false);
       sessionStorage.setItem("welcomePlayed", "true");
     }, 5000);
     return () => clearTimeout(timer);
   }, []);
+
+  // null 时渲染遮罩，防止主页闪现
+  if (show === null) {
+    return (
+      <div className="fixed inset-0 z-[9999] bg-black" />
+    );
+  }
+
   return (
     <AnimatePresence>
       {show && (
