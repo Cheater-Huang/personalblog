@@ -1,5 +1,6 @@
 import Link from "next/link";
 import BackButton from "@/components/BackButton";
+import Comments from "@/components/Comments";
 
 export default function AboutPage() {
   return (
@@ -60,7 +61,7 @@ export default function AboutPage() {
             <p className="text-lg mb-1">故都灵</p>
             <p className="text-sm">写于某个深夜</p>
           </div>
-
+           <Comments page="about" />
         </div>
 
       </div>
