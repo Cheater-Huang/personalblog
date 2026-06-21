@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getAllCategories, getPostsByCategory } from "@/lib/posts";
+import BackButton from "@/components/BackButton";
 
 export default function BlogPage() {
   const categories = getAllCategories();
@@ -9,12 +10,7 @@ export default function BlogPage() {
       <div className="w-full max-w-2xl px-6" style={{ marginTop: "120px" }}>
 
         {/* 返回键 */}
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 text-white/40 hover:text-white text-sm transition-colors mb-10"
-        >
-          ← 返回首页
-        </Link>
+       <BackButton label="← 返回首页" />
 
         {/* 标题 */}
         <h1 className="text-3xl font-bold font-xingkai mb-2">随笔</h1>

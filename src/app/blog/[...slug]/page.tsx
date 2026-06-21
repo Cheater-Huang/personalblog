@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getPostBySlug, getAllPosts } from "@/lib/posts";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import BackButton from "@/components/BackButton";
 
 export async function generateStaticParams() {
   const posts = getAllPosts();
@@ -20,12 +21,7 @@ export default async function PostPage({
       <div className="w-full max-w-2xl px-6" style={{ marginTop: "50px" }}>
 
         {/* 返回键 */}
-        <Link
-          href="/blog"
-          className="inline-flex items-center gap-2 text-white/40 hover:text-white text-sm transition-colors mb-10"
-        >
-          ← 返回随笔
-        </Link>
+       <BackButton label="← 返回随笔" />
 
         {/* 文章头部 */}
        {/* 文章头部 */}

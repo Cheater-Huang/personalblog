@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getChapter, getChaptersByNovel, getAllNovels } from "@/lib/novels";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import BackButton from "@/components/BackButton";
 
 export async function generateStaticParams() {
   const novels = getAllNovels();
@@ -31,12 +32,7 @@ export default async function ChapterPage({
       <div className="w-full max-w-2xl px-6" style={{ marginTop: "70px" }}>
 
         {/* 返回键 */}
-        <Link
-          href={`/projects/${novel}`}
-          className="inline-flex items-center gap-2 text-white/40 hover:text-white text-sm transition-colors mb-8"
-        >
-          ← 返回目录
-        </Link>
+        <BackButton label="← 返回目录" />
 
         {/* 章节标题区域 */}
         <div className="w-full px-8 pt-8 pb-0 text-center" style={{ background: "#f5f0e8" }}>

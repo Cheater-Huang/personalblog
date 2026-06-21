@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BackButton from "@/components/BackButton";
 
 export default function AboutPage() {
   return (
@@ -6,12 +7,7 @@ export default function AboutPage() {
       <div className="w-full max-w-2xl px-6" style={{ marginTop: "120px" }}>
 
         {/* 返回键 */}
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 text-white/40 hover:text-white text-sm transition-colors mb-10"
-        >
-          ← 返回首页
-        </Link>
+        <BackButton label="← 返回首页" />
 
         {/* 信件卡片 */}
         <div className="w-full px-10 py-12 mb-16" style={{ background: "#f5f0e8", color: "#111111" }}>

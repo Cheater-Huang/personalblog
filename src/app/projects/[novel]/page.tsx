@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getNovelInfo, getChaptersByNovel, getAllNovels } from "@/lib/novels";
+import BackButton from "@/components/BackButton";
 
 export async function generateStaticParams() {
   const novels = getAllNovels();
@@ -20,12 +21,7 @@ export default async function NovelPage({
       <div className="w-full max-w-2xl px-6" style={{ marginTop: "120px" }}>
 
         {/* 返回键 */}
-        <Link
-          href="/projects"
-          className="inline-flex items-center gap-2 text-white/40 hover:text-white text-sm transition-colors mb-10"
-        >
-          ← 返回小说列表
-        </Link>
+        <BackButton label="← 返回小说列表" />
 
         {/* 小说头部 */}
         <div
