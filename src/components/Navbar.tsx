@@ -27,12 +27,12 @@ export default function Navbar() {
 
         {/* 手机端汉堡按钮 */}
         <button
-          className="md:hidden flex flex-col gap-1 p-2"
+          className="md:hidden flex flex-col gap-1.5 p-2"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          <div className="w-5 h-0.5 bg-white drop-shadow-lg"></div>
-          <div className="w-5 h-0.5 bg-white drop-shadow-lg"></div>
-          <div className="w-5 h-0.5 bg-white drop-shadow-lg"></div>
+          <div className="w-6 h-0.5 bg-white drop-shadow-lg"></div>
+          <div className="w-6 h-0.5 bg-white drop-shadow-lg"></div>
+          <div className="w-6 h-0.5 bg-white drop-shadow-lg"></div>
         </button>
       </nav>
 
