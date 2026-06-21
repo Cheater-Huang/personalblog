@@ -4,15 +4,19 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import BackButton from "@/components/BackButton";
 
 export async function generateStaticParams() {
-  const novels = getAllNovels();
-  const params = [];
-  for (const novel of novels) {
-    const chapters = getChaptersByNovel(novel.slug);
-    for (const chapter of chapters) {
-      params.push({ novel: novel.slug, chapter: chapter.slug });
+  try {
+    const novels = getAllNovels();
+    const params = [];
+    for (const novel of novels) {
+      const chapters = getChaptersByNovel(novel.slug);
+      for (const chapter of chapters) {
+        params.push({ novel: novel.slug, chapter: chapter.slug });
+      }
     }
+    return params;
+  } catch {
+    return [];
   }
-  return params;
 }
 
 export default async function ChapterPage({
@@ -32,9 +36,14 @@ export default async function ChapterPage({
       <div className="w-full max-w-2xl px-6" style={{ marginTop: "70px" }}>
 
         {/* 返回键 */}
-        <Link
+       <Link
           href={`/projects/${novel}`}
-          className="inline-flex items-center gap-2 text-white/40 hover:text-white text-sm transition-colors mb-8"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm transition-all duration-300 mb-8"
+          style={{
+            background: "rgba(255,255,255,0.1)",
+            border: "1px solid rgba(255,255,255,0.2)",
+            color: "rgba(255,255,255,0.8)",
+          }}
         >
           ← 返回目录
         </Link>

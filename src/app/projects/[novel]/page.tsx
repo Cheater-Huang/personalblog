@@ -3,8 +3,12 @@ import { getNovelInfo, getChaptersByNovel, getAllNovels } from "@/lib/novels";
 import BackButton from "@/components/BackButton";
 
 export async function generateStaticParams() {
-  const novels = getAllNovels();
-  return novels.map((n) => ({ novel: n.slug }));
+  try {
+    const novels = getAllNovels();
+    return novels.map((n) => ({ novel: n.slug }));
+  } catch {
+    return [];
+  }
 }
 
 export default async function NovelPage({
