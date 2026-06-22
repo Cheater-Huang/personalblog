@@ -33,23 +33,26 @@ export default function AboutPage() {
           </div>
 
           {/* 称呼 */}
-          <p className="text-xl font-xingkai mb-8" style={{ color: "#2c2c2c" }}>
-            亲爱的访客，你好：
+          <p className="text-lg font-xingkai mb-8" style={{ color: "#2c2c2c" }}>
+            来访的朋友：
           </p>
 
           {/* 正文 */}
           <div className="space-y-6 font-xingkai text-lg leading-loose" style={{ color: "#3a3a3a" }}>
             <p style={{ textIndent: "2em" }}>
-              我是故都灵，一个喜欢在深夜写字的人。这里是我的赛博小屋，存放着我的随笔、小说，还有一些说不清道不明的心情。
+              我想能看到这篇文字的都是关系不错的，那我也不必大费周章地介绍了，如果硬要说点什么介绍自己的，无非还是那句话：
             </p>
             <p style={{ textIndent: "2em" }}>
-              我相信文字是有重量的，每一个字落下去，都会在某个地方留下痕迹。也许你现在读到这里，就是那个痕迹找到了它该去的地方。
+              三少爷文章第一，吹水第二，逻辑第三。
             </p>
             <p style={{ textIndent: "2em" }}>
-              平时喜欢听音乐、读书、发呆。偶尔写写代码，偶尔对着窗外的云发一下午的呆。生活有时候很重，但总有一些轻盈的瞬间值得被记录下来。
+              至于为何是三少爷，这个不必赘述了，文章第一，这个了解我的人都知道，所以才无聊搭了这个博客。
             </p>
             <p style={{ textIndent: "2em" }}>
-              如果你也是一个喜欢在文字里寻找共鸣的人，那我们大概会是同路人。欢迎常来坐坐。
+              如果你无聊透顶又想起我这个朋友的话，随时来访，也可以在匿名评论区畅所欲言，反正我也不知道是谁写的（笑）。
+            </p>
+            <p style={{ textIndent: "2em" }}>
+              以上，祝好。
             </p>
           </div>
 
@@ -58,8 +61,8 @@ export default function AboutPage() {
 
           {/* 落款 */}
           <div className="text-right font-xingkai" style={{ color: "#6b5c3e" }}>
-            <p className="text-lg mb-1">故都灵</p>
-            <p className="text-sm">写于某个深夜</p>
+            <p className="text-sm mb-1">故都灵</p>
+            <p className="text-sm">————丙午年五月初八于惠州</p>
           </div>
            <Comments page="about" />
         </div>
