@@ -22,7 +22,7 @@ export default function Navbar() {
           <Link href="/" className="text-white/80 hover:text-white text-sm transition-colors drop-shadow-lg">首页</Link>
           <Link href="/blog" className="text-white/80 hover:text-white text-sm transition-colors drop-shadow-lg">随笔</Link>
           <Link href="/projects" className="text-white/80 hover:text-white text-sm transition-colors drop-shadow-lg">小说</Link>
-          <Link href="/about" className="text-white/80 hover:text-white text-sm transition-colors drop-shadow-lg">关于我</Link>
+          <Link href="/about" className="text-white/80 hover:text-white text-sm transition-colors drop-shadow-lg">致访客</Link>
         </div>
 
         {/* 手机端汉堡按钮 */}
