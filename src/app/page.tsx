@@ -63,7 +63,7 @@ export default function Home() {
 
           {/* 标签 */}
           <div className="flex flex-wrap gap-2 mt-8 justify-center">
-            {["技术人员", "写作爱好者", "豪情在天"].map((tag) => (
+            {["技术人员", "写手", "豪情在天","lsp"].map((tag) => (
               <span
                 key={tag}
                 className="px-4 py-1.5 rounded-full text-base bg-white/10 text-white/70 border border-white/10"
@@ -79,9 +79,9 @@ export default function Home() {
           {/* 导航卡片 */}
           <div className="flex flex-col gap-6 w-full max-w-2xl" style={{ marginTop: "2rem" }}>
             {[
-              { href: "/blog", emoji: "📝", title: "随笔", desc: "记录思考与生活" },
-              { href: "/projects", emoji: "📖", title: "小说", desc: "我写的一些故事" },
-              { href: "/about", emoji: "👤", title: "关于我", desc: "认识一下我吧" },
+              { href: "/blog", emoji: "📝", title: "随笔", desc: "记录生活与评述" },
+              { href: "/projects", emoji: "📖", title: "小说", desc: "我写过的一些故事" },
+              { href: "/about", emoji: "👤", title: "致访客", desc: "字面意思" },
             ].map((item) => (
               <Link
                 key={item.href}
@@ -98,9 +98,9 @@ export default function Home() {
           {/* 社交链接 */}
           <div className="flex gap-4 mt-8">
             {[
-              { label: "GitHub", href: "https://github.com" },
-              { label: "Twitter", href: "https://twitter.com" },
-              { label: "邮箱", href: "mailto:you@example.com" },
+              { label: "GitHub", href: "https://github.com/Cheater-Huang" },
+              { label: "Twitter", href: "https://x.com/huang37861" },
+              { label: "邮箱", href: "mailto:3395126648@qq.com" },
             ].map((item) => (
               <a
                 key={item.label}
