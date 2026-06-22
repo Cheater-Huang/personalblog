@@ -103,7 +103,7 @@ export default function WelcomeAnimation() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
           >
-            我们终将在充满鲜花芬芳的西风尽头重逢
+            我觉得天堂还有很远，所以我为自己打造一个乌托邦
           </motion.h1>
 
           <motion.p
