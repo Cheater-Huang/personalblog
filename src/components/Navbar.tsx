@@ -43,7 +43,7 @@ export default function Navbar() {
           <Link href="/" className="text-white/80 hover:text-white text-sm" onClick={() => setMenuOpen(false)}>首页</Link>
           <Link href="/blog" className="text-white/80 hover:text-white text-sm" onClick={() => setMenuOpen(false)}>随笔</Link>
           <Link href="/projects" className="text-white/80 hover:text-white text-sm" onClick={() => setMenuOpen(false)}>小说</Link>
-          <Link href="/about" className="text-white/80 hover:text-white text-sm" onClick={() => setMenuOpen(false)}>关于我</Link>
+          <Link href="/about" className="text-white/80 hover:text-white text-sm" onClick={() => setMenuOpen(false)}>致访客</Link>
         </div>
       )}
     </>
