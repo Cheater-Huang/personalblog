@@ -21,7 +21,7 @@ export default function AboutPage() {
         </Link>
 
         {/* 信件卡片 */}
-        <div className="w-full px-10 py-12 mb-16" style={{ background: "#f5f0e8", color: "#111111" }}>
+        <div className="w-full px-14 py-12 mb-16" style={{ background: "#f5f0e8", color: "#111111" }}>
 
           {/* 信件头部 */}
           <div className="text-right text-sm mb-8" style={{ color: "#6b5c3e" }}>
