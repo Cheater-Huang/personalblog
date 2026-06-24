@@ -38,7 +38,7 @@ export default async function PostPage({
 
         {/* 文章头部 */}
        {/* 文章头部 */}
-       <div className="w-full px-8 pt-8 pb-0 mb-0 mt-0 text-center" style={{background: "#f5f0e8"}}>
+       <div className="w-full px-12 pt-8 pb-0 mb-0 mt-0 text-center" style={{background: "#f5f0e8"}}>
           <div className="text-black/40 text-sm mb-3">{meta.date} · {meta.category}</div>
          <h1 className="text-lg md:text-xl font-bold font-xingkai leading-snug text-[#2c2c2c]">
             {meta.title}
@@ -48,7 +48,7 @@ export default async function PostPage({
 
         {/* 纸黄色文章卡片 */}
         <div
-          className="w-full px-8 pb-10 flex-1"
+          className="w-full px-12 pb-10 flex-1"
           style={{ background: "#f5f0e8", minHeight: "calc(100vh - 120px)" }}
         >
           {/* 分割线 */}
