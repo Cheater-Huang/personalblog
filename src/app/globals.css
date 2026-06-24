@@ -58,3 +58,7 @@ body {
 .prose p {
   text-indent: 2em;
 }
+.prose {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
