@@ -68,6 +68,19 @@ export default async function PostPage({
           </div>
 
           <Comments page={meta.slug.join("/")} />
+           {/* 底部返回键 */}
+          <div className="mt-12 flex justify-center">
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm transition-all duration-300"
+              style={{
+                background: "#6b5c3e",
+                color: "white",
+              }}
+            >
+              ← 返回随笔列表
+            </Link>
+          </div>
         </div>
 
       </div>

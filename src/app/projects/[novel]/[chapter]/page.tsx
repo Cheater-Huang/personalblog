@@ -95,6 +95,19 @@ export default async function ChapterPage({
             ) : <div />}
           </div>
           <Comments page={`${novel}/${chapter}`} />
+            {/* 底部返回键 */}
+          <div className="mt-12 flex justify-center">
+            <Link
+              href={`/projects/${novel}`}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm transition-all duration-300"
+              style={{
+                background: "#6b5c3e",
+                color: "white",
+              }}
+            >
+              ← 返回目录
+            </Link>
+          </div>
         </div>
 
       </div>
