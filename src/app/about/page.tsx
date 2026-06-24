@@ -21,8 +21,7 @@ export default function AboutPage() {
         </Link>
 
         {/* 信件卡片 */}
-        <div className="w-full px-14 py-12 mb-16" style={{ background: "#f5f0e8", color: "#111111" }}>
-
+        <div className="w-full px-8 py-12 mb-16" style={{ background: "#f5f0e8", color: "#111111" }}>
           {/* 信件头部 */}
           <div className="text-right text-sm mb-8" style={{ color: "#6b5c3e" }}>
             {new Date().toLocaleDateString("zh-CN", {
@@ -38,7 +37,7 @@ export default function AboutPage() {
           </p>
 
           {/* 正文 */}
-          <div className="space-y-6 font-xingkai text-lg leading-loose" style={{ color: "#3a3a3a" }}>
+         <div className="space-y-6 font-xingkai text-lg leading-loose" style={{ color: "#3a3a3a", paddingLeft: "1rem", paddingRight: "1rem" }}>
             <p style={{ textIndent: "2em" }}>
               我想能看到这篇文字的都是跟我关系不错的，那我也不必大费周章地介绍了，如果硬要说点什么介绍自己的，无非还是那句话：
             </p>
